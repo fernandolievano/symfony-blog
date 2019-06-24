@@ -1,26 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogController!{% endblock %}
+{% block title %}Hello BlogController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+  <main>
+    <section class="container">
+      <h1>Create a new Post✅</h1>
+      <hr>
+      <h5>Create a new post here:</h5>
+      <article class="columns">
+        <div class="column col-7 col-mx-auto form-group">
+          <label class="form-label" for="title">
+            Title
+          </label>
+          <input class="form-input" name="title" placeholder="Title" type="text">
+        </div>
+        <div class="column col-7 col-mx-auto form-group">
+          <label class="form-label" for="content">Content</label>
+          <textarea class="form-input" cols="84" id="input-content" name="content" placeholder="Write tyour post here" rows="10"></textarea>
+        </div>
+        <div class="column col-7 col-mx-auto form-group">
+          <label class="form-label" for="author">
+            Author
+          </label>
+          <input class="form-input" name="author" placeholder="Author" type="text">
+        </div>
 
-<div class="example-wrapper">
-    <h1>Create a new Post✅</h1>
-
-    Create a new post here:
-    <hr>
-    <div> 
-      <label for="title">
-        Title
-        <input type="text" name="title" placeholder="Title">
-      </label>
-    </div>
-    <div>
-      <a href="{{ path('store_post') }}">Submit post!</a>
-    </div>
-</div>
+        <div class="column col-12 text-center col-mx-auto form-group">
+          <a class="btn btn-success" href="{{ path('store_post') }}">Submit post!</a>
+        </div>
+      </article>
+    </section>
+  </main>
 {% endblock %}
