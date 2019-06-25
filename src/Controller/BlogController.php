@@ -13,6 +13,14 @@ use App\Entity\Post;
 class BlogController extends AbstractController
 {
     /**
+     * @Route("/", name="welcome")
+     */
+    public function welcome ()
+    {
+        return $this->render('welcome.html.twig');
+    }
+
+    /**
      * @Route("/blog/{page<\d+>?1}", name="blog")
      */
     public function index($page)

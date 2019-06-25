@@ -1,14 +1,22 @@
-<header class="container">
+<header class="container bg-secondary">
   <nav class="navbar">
     <section class="navbar-section">
-      <a class="navbar-brand mr-2" href="#">
-        <b>Home</b>
+      <a class="navbar-brand mr-2" href="{{ path('welcome') }}">
+        <b>
+          Home
+        </b>
       </a>
-      <a href="{{ path('blog') }}" class="btn btn-link">Blog</a>
-      <a href="{{ path('create_post') }}" class="btn btn-link">New Post</a>
+      <a href="{{ path('blog') }}" class="btn btn-link">
+        Blog
+      </a>
+      <a href="{{ path('create_post') }}" class="btn btn-link">
+        New Post
+      </a>
     </section>
     <section class="navbar-section">
-      <a class="btn btn-link" href="#">User Settings</a>
+      <a class="btn btn-link" href="#">
+        User Settings
+      </a>
     </section>
   </nav>
 </header>
